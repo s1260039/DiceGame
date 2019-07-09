@@ -1,12 +1,20 @@
 import java.util.Random;
+import java.util.Scanner;
 
 class DiceGame {
     private Die die1;
     private Die die2;
     
     public void play() {
+
+	System.out.println("What is your name?");
+	Scanner scan = new Scanner(System.in);
+	String str = scan.next();
+	System.out.println("Hello, " + str + "!" );
+
 	die1 = new Die();
 	die2 = new Die();
+
 
 	System.out.println("Rolling the dice...");
 	System.out.println("Die 1: " + die1.getFaceValue());
@@ -16,10 +24,11 @@ class DiceGame {
 
 	
 	if(totalValue> 7){
-	    System.out.println("You won!");
+	    System.out.println(str +" won!");
 	}else {
-	    System.out.println("You lost.");
+	    System.out.println(str+" lost.");
 	}
+
     }
 
     public static void main(String [] args){
