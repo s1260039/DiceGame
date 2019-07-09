@@ -11,7 +11,15 @@ class DiceGame {
 	System.out.println("Rolling the dice...");
 	System.out.println("Die 1: " + die1.getFaceValue());
 	System.out.println("Die 2: " + die2.getFaceValue());
-	System.out.println("Total value : "+ (die1.getFaceValue()+die2.getFaceValue()));
+	int totalValue = die1.getFaceValue()+die2.getFaceValue();
+	System.out.println("Total value : "+ totalValue);
+
+	
+	if(totalValue> 7){
+	    System.out.println("You won!");
+	}else {
+	    System.out.println("You lost.");
+	}
     }
 
     public static void main(String [] args){
